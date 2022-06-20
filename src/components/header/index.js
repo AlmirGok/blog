@@ -7,7 +7,11 @@ export default function NavBar() {
     <Header>
       <div>
         <Link to="/">
-          <img className="ImageLogo" src="" />
+          <img
+            className="ImageLogo"
+            alt=""
+            src="/assets/images/LogoWhite.svg"
+          />
         </Link>
       </div>
       <div>
@@ -19,13 +23,13 @@ export default function NavBar() {
         <div className="BoxTextMode BoxTextModeWhite">
           <p> Apaga a luz</p>
         </div>
-        <img className="ImageMode" src="" />
+        <img className="ImageMode" alt="" src="/assets/images/moon.png" />
       </label>
       <label className="ModeDark" for="Mode">
         <div className="BoxTextMode BoxTextModeWhite">
           <p> Acender a luz</p>
         </div>
-        <img className="ImageMode" src="" />
+        <img className="ImageMode" alt="" src="/assets/images/sun.svg" />
       </label>
     </Header>
   );

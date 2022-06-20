@@ -15,8 +15,12 @@ export default function Home() {
           </p>
         </div>
         <div className="BoxImageMouse">
-          <img className="ImageMouse" src="" />
-          <img className="ImageMouseArrow" src="" />
+          <img className="ImageMouse" alt="" src="/assets/images/mouse.png" />
+          <img
+            className="ImageMouseArrow"
+            alt=""
+            src="/assets/images/arrowBottom.png"
+          />
         </div>
       </div>
     </Section>

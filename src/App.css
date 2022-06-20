@@ -11,4 +11,21 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+svg {
+  fill: #fff;
+}
+
+input[type="checkbox"]:checked ~ section {
+  background: #fff;
+}
+input[type="checkbox"]:checked ~ nav > label.ModeWhite {
+  display: flex;
+}
+input[type="checkbox"]:checked ~ nav > label.ModeDark {
+  display: none;
+}
+input {
+  display: none;
 }

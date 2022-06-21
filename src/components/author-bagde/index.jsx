@@ -5,6 +5,7 @@ export default function AuthorBagde() {
   return (
     <Section>
       <img
+        alt=""
         className="image-author"
         src="https://tm.ibxk.com.br/2017/06/22/22100428046161.jpg"
       />

@@ -3,7 +3,7 @@ export const Section = styled.section`
   background-color: #111;
   color: #fff;
   display: flex;
-  height: calc(100vh - 70px);
+  flex-direction: column;
   div.BoxTop {
     position: relative;
     flex-direction: column;
@@ -11,8 +11,7 @@ export const Section = styled.section`
     justify-content: center;
     display: flex;
     left: 0;
-    width: 100vw;
-    height: calc(100vh - 70px);
+    height: 100vh;
     margin: 0;
     padding: 0;
     background: radial-gradient(
@@ -65,29 +64,29 @@ export const Section = styled.section`
       width: 60px;
       display: flex;
       position: absolute;
-      bottom: 40px;
+      bottom: 60px;
       flex-direction: column;
       img.ImageMouse {
         width: 55px;
       }
       img.ImageMouseArrow {
         width: 20px;
-        margin-top: 0px;
-        position: fixed;
+        margin-bottom: 0px;
         padding-top: 100px;
+        position: absolute;
         animation: rotation 1s linear 1s infinite;
       }
       @keyframes rotation {
         0% {
-          margin-top: 0px;
+          margin-bottom: 0px;
         }
 
         50% {
-          margin-top: -5px;
+          margin-bottom: -5px;
         }
 
         100% {
-          margin-top: 0px;
+          margin-bottom: 0px;
         }
       }
     }

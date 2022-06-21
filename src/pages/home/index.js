@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Section } from "./styles.js";
+import FeaturedPost from "../../components/featured-post/index.jsx";
+import PostList from "../../components/post-list/index.jsx";
 
 export default function Home() {
+  const [posts, setPosts] = useState();
+
+  async function getPosts() {
+    const response = await fetch(
+      "https://cms-blog-tutorial.herokuapp.com/api/posts?populate=*"
+    );
+
+    const data = await response.json();
+
+    setPosts(data.data);
+  }
+
+  useEffect(() => {
+    getPosts();
+  }, []);
+
   return (
     <Section>
       <div className="BoxTop">
@@ -15,13 +33,19 @@ export default function Home() {
           </p>
         </div>
         <div className="BoxImageMouse">
-          <img className="ImageMouse" alt="" src="/assets/images/mouse.png" />
           <img
             className="ImageMouseArrow"
             alt=""
             src="/assets/images/arrowBottom.png"
           />
+          <img className="ImageMouse" alt="" src="/assets/images/mouse.png" />
         </div>
+      </div>
+      <div>
+        {posts && posts.length > 0 && (
+          <FeaturedPost post={posts[0].attributes} />
+        )}
+        <PostList posts={posts} />
       </div>
     </Section>
   );

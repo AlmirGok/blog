@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const Header = styled.nav`
   background-color: #111;
   color: #fff;
+  width: calc(100% - 40px);
   display: flex;
   align-items: center;
   padding: 0px 20px;
@@ -9,6 +10,8 @@ export const Header = styled.nav`
   height: 70px;
   border: none;
   justify-content: space-between;
+  position: fixed;
+  z-index: 1;
   label.ModeWhite {
     display: none;
   }
@@ -53,9 +56,12 @@ export const Header = styled.nav`
     }
   }
   div {
-    margin-right: 20px;
     img.ImageLogo {
       width: 80px;
+      background: #111;
+      padding: 10px 20px 10px 30px;
+      margin-left: -40px;
+      border-radius: 0px 50px 50px 0px;
     }
     a {
       text-decoration: none;

@@ -20,6 +20,12 @@ svg {
 input[type="checkbox"]:checked ~ section {
   background: #fff;
 }
+input[type="checkbox"]:checked ~ nav {
+  background-color: #fff;
+}
+input[type="checkbox"]:checked ~ nav > div > a {
+  color: #111 !important;
+}
 input[type="checkbox"]:checked ~ nav > label.ModeWhite {
   display: flex;
 }

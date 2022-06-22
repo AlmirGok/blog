@@ -1,6 +1,5 @@
 import React from "react";
 import { Section } from "./styles";
-import AuthorBadge from "../author-bagde";
 
 export default function FeaturedPost({ post }) {
   return (

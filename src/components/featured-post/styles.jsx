@@ -9,14 +9,60 @@ export const Section = styled.section`
   div.featured-post-container {
     color: #fff;
     display: flex;
-    width: 80%;
-    margin: 30px 0px;
+    width: 70%;
+    height: 55vh;
+    margin: 50px 0px;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
-    background: black;
-    img.image-featured-post {
-      width: 50vw;
-      height: 60vh;
-      object-fit: cover;
+    position: relative;
+    div.box-content {
+      background: linear-gradient(
+        90deg,
+        #47cf73,
+        #ffdd40,
+        #ae63e4,
+        #0ebeff,
+        #47cf73
+      );
+      right: 0px;
+      position: absolute;
+      width: 400px;
+      padding: 5px;
+      border-radius: 5px;
+      div {
+        background: #111;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        border-radius: 5px;
+        h2.text-title {
+          margin: 0px 0px 20px 0px;
+          color: #38d430;
+          font-size: 24px;
+        }
+        p.text-description {
+          margin: 0px 0px 20px 0px;
+          font-size: 18px;
+          line-height: 26px;
+        }
+        p.text-date {
+          font-size: 16px;
+          color: #a9a9a9;
+        }
+      }
     }
+  }
+
+  img.image-featured-post {
+    height: 55vh;
+    display: flex;
+    flex: 1;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: calc(100% - 200px);
+    object-fit: cover;
+    border-radius: 10px;
   }
 `;

@@ -7,7 +7,7 @@ export default function Post({ post }) {
       <div className="featured-post-container">
         <div>
           <img
-          alt=""
+            alt=""
             className="image-featured-post"
             src={post?.hero?.data?.attributes?.formats?.medium?.url}
           />

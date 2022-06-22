@@ -13,11 +13,12 @@ export default function FeaturedPost({ post }) {
             src={post?.hero?.data?.attributes?.formats?.medium?.url}
           />
         </div>
-        <div>
-          <p>{post.date}</p>
-          <h2>{post.tile}</h2>
-          <p>{post.description}</p>
-          <AuthorBadge />
+        <div className="box-content">
+          <div>
+            <h2 className="text-title">{post.title}</h2>
+            <p className="text-description">{post.description}</p>
+            <p className="text-date">{post.date}</p>
+          </div>
         </div>
       </div>
     </Section>

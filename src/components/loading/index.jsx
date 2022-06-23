@@ -1,6 +1,6 @@
 import React from "react";
 import { Section } from "./styles";
-import ContentLoader, { Facebook } from "react-content-loader";
+import ContentLoader from "react-content-loader";
 
 export default function Loading() {
   return (

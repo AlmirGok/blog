@@ -4,6 +4,7 @@ export const Section = styled.section`
   color: #fff;
   display: flex;
   flex-direction: column;
+
   div.BoxTop {
     position: relative;
     flex-direction: column;

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Section } from "./styles";
 import Post from "../../components/post/index.jsx";
 
-export default function PostList({ posts }) {
+
+export default function PostList({ posts, isLoading }) {
   return (
     <Section>
       {posts &&

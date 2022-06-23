@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+
 import { Section } from "./styles.js";
 import FeaturedPost from "../../components/featured-post/index.jsx";
 import PostList from "../../components/post-list/index.jsx";
+import Loading from "../../components/loading";
 
 export default function Home() {
-  const [posts, setPosts] = useState();
+  const [removeLoading, setRemoveLoading] = useState(false);
 
+  const [posts, setPosts] = useState();
   async function getPosts() {
     const response = await fetch(
       "https://cms-blog-tutorial.herokuapp.com/api/posts?populate=*"
@@ -14,8 +17,9 @@ export default function Home() {
     const data = await response.json();
 
     setPosts(data.data);
-  }
 
+    setRemoveLoading(true);
+  }
   useEffect(() => {
     getPosts();
   }, []);
@@ -42,6 +46,8 @@ export default function Home() {
         </div>
       </div>
       <div>
+        {!removeLoading && <Loading />}
+
         {posts && posts.length > 0 && (
           <FeaturedPost post={posts[0].attributes} />
         )}

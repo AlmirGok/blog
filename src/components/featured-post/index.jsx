@@ -5,12 +5,13 @@ export default function FeaturedPost({ post }) {
   return (
     <Section>
       <div className="featured-post-container">
-        <div>
+        <div className="box-img">
           <img
             alt=""
             className="image-featured-post"
             src={post?.hero?.data?.attributes?.formats?.medium?.url}
           />
+          <span className="shadow-bottom" />
         </div>
         <div className="box-content">
           <div>

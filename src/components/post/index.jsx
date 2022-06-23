@@ -12,12 +12,16 @@ export default function Post({ post }) {
             src={post?.hero?.data?.attributes?.formats?.medium?.url}
           />
         </div>
-        <div>
-          <p>{post.date}</p>
-          <h2>{post.title}</h2>
-          <p>{post.description}</p>
+        <span></span>
+        <div className="text-box">
+          <h2 className="text-title">{post.title}</h2>
+          <p className="text-description">{post.description}</p>
+          <div className="box-text-date">
+            <p className="text-date">{post.date}</p>
+          </div>
         </div>
       </div>
+      <span className="shadow-bottom" />
     </Section>
   );
 }

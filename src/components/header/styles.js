@@ -11,7 +11,8 @@ export const Header = styled.nav`
   border: none;
   justify-content: space-between;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
+  box-shadow: 0px 0px 10px 1px #00000030;
   label.ModeWhite {
     display: none;
   }
